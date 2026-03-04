@@ -1,0 +1,272 @@
+body {
+    background-color: lightsalmon;
+}
+main {
+    background-color: lightsalmon;
+    font-family: 'Annie Use Your Telescope', cursive;
+}
+footer {
+    background-color: lightsalmon;
+    color: white;
+    text-align: center;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: Amatic SC, cursive;
+    height: 40px;
+}
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    font-family: Annie Use Your Telescope, cursive;
+    height: 60px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}   
+.topnav a{
+    float: left;
+    display: block;
+    color: lightsalmon;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    position: relative;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.topnav a.active {
+    background-color: pink;
+    color: white;
+}
+.container-fluid {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    max-height: 475px;
+    border-radius: 12px;
+    background-color: white;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    position: relative;
+}
+.nav-image-button{
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 50px; 
+    height: 50px;
+    margin-right: 5px;
+
+}
+.notif-button{
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 50px; 
+    height: 50px;
+    margin-right: 5px;
+}
+.search-button{
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+
+}
+.search-bar {
+    width: 100%;
+    float: right;
+}
+.navbar-interactions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    float: right;
+    height: 40px;
+    padding: 10px;
+}
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+div::-webkit-scrollbar {
+    width: 8px;
+}
+
+div::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+div::-webkit-scrollbar-thumb {
+    background: rgba(255, 192, 203, 0.4);
+    border-radius: 20px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 192, 203, 0.5);
+}
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+ul::-webkit-scrollbar-thumb {
+    background: rgba(255, 192, 203, 0.4);
+    border-radius: 20px;
+}
+
+ul::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 192, 203, 0.5);
+}
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+input[type="text"], textarea ,select{
+    font-family: 'Annie Use Your Telescope', cursive;
+    font-size: 16px;
+    color: black;
+    padding: 5px;
+    border: 1px solid lightsalmon;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+button {
+    background-color: lightsalmon; 
+    color: white; 
+    padding: 10px 20px; 
+    border: 2px pink solid; 
+    cursor: pointer; 
+    width: 50%;
+    border-radius: 12px;
+    font: 15px 'Annie Use Your Telescope', cursive;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+input[type="text"].search-input{
+    width: 300px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    padding: 7px;
+}
+p {
+    margin: 5px;
+    overflow-wrap:break-word;
+}
+.message {
+    position: absolute;
+    background-color: lightsalmon;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: small;
+    z-index: 1;
+    bottom: 85%;
+    left: 61%;
+    margin-left: -60px;
+    opacity: 0.8;
+}
+.message::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 42%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent lightsalmon transparent;
+}
+#notification-container {
+    position: fixed;
+    bottom: 85%;
+    left: 38%;
+    z-index: 9999;
+}
+.notification {
+    background-color: lightsalmon;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 3px dashed pink;
+    margin-bottom: 10px;
+    font-size:large;
+    opacity: 0.8;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards, fadeOut 0.5s 3s forwards;
+}
+
+@keyframes fadeInUp {
+    to{
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+}
+@keyframes fadeOut {
+    to{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+.notif-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 58%;
+    top: 10%;
+    width: 34%;
+    height: 40%;
+    overflow: auto;
+    border-radius: 12px;
+    padding: 10px;
+    background-color: rgb(255, 192, 203, 0.8);
+}
+.notif-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+}
+.close {
+    color: lightsalmon;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:hover:focus {
+    color: salmon;
+    text-decoration: none;
+    cursor: pointer;
+}
+.notif {
+    background-color: rgb(255, 160, 122, 0.8);
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 88%;
+}
